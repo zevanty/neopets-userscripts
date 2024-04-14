@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.0
+// @version      1.0.1
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
 // @include      /^https?:\/\/www\.neopets\.com\/(explore|trudys_surprise|market_plaza|market_bazaar)\.phtml$/
@@ -23,8 +23,13 @@
 // ==/UserScript==
 (function() {
     'use strict';
-    //location.href = location + "/";
+
+    // This may not work on certain browsers
+    location.href = location + "/";
+
+    // Backup in case the previous doesn't work
     window.onload = function() {
        location.href = location + "/";
     }
+
 })();
