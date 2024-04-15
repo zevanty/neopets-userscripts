@@ -15,3 +15,17 @@ This will redirect the page to use Classic UI. I generally prefer the look-and-f
 This will enable a secret option for the Neocola Machine to give out more NP.
 
 **Note:** Although the Neopets code has this secret option that you cannot access without modifying the frontend code, it may be considered cheating. *USE AT YOUR OWN RISK.*
+
+## Neopian Shop - Hide Items
+[userscript](shops-hide-items.user.js)
+
+This will hide specific items from a Neopian shop.
+
+**Warning:** *THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.*
+
+## Neopian Shop - Show Items
+[userscript](shops-show-items.user.js)
+
+This will only show specific items from a Neopian shop.
+
+**Warning:** *THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.*
