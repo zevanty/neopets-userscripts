@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Hide Specific Items - Collectable Coins
-// @version      1.0.0.20240414
+// @version      1.0.0.20240419
 // @author       zevanty
 // @description  Hide specific items from Collectable Coins shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=68(&type=shop)?$/
@@ -20,10 +20,10 @@
 
             // Space Station Coins
             'Grundo Veggieballs Coin', 'Grobleen Salad Coin', 'Cosmic Cheese Stars Coin', //'Roast Gargapple Coin', 'Zoomik Coin',
-            /*'Vacumatic 9000 Coin', 'N-4 Information Retrieval Bot Coin',*/ 'GX-4 Oscillabot Coin', /*'Gargaroxs Recipe Book Coin',*/ 'Gormball Coin',
-            /*'Electro Shield Coin',*/ 'H4000 Helmet Coin', 'Grundo Warehouse Coin', /*'Adopt A Grundo Coin',*/ 'Evil Fuzzle Coin',
+            /*'Vacumatic 9000 Coin', 'N-4 Information Retrieval Bot Coin', 'GX-4 Oscillabot Coin', 'Gargaroxs Recipe Book Coin',*/ 'Gormball Coin',
+            /*'Electro Shield Coin',*/ 'H4000 Helmet Coin', 'Grundo Warehouse Coin', /*'Adopt A Grundo Coin', 'Evil Fuzzle Coin',*/
             /*'Splat A Sloth Coin', 'Astral Blade Coin', 'Lever of Doom Coin', 'Super Nova Coin', 'Mallow Coin',
-            'Bzzt Blaster Coin', 'Gorix and Cylara Coin', 'Neopet V2 Coin', 'Smiling Space Faerie Coin',*/ 'Scowling Sloth Coin',
+            'Bzzt Blaster Coin', 'Gorix and Cylara Coin', 'Neopet V2 Coin', 'Smiling Space Faerie Coin', 'Scowling Sloth Coin',*/
 
             // Scarabs
             'Basic Yellow Collectable Scarab', 'Polkadot Collectable Scarab', 'Orange Spotted Collectable Scarab', 'Common Desert Collectable Scarab', 'Bushy Antennae Collectable Scarab',

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Hide Specific Items - Neopian Post Office
-// @version      1.0.0.20240414
+// @version      1.0.0.20240419
 // @author       zevanty
 // @description  Hide specific items from Neopian Post Office shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=58(&type=shop)?$/
@@ -27,7 +27,7 @@
 
             // Tyrannia
             'Tyrannian Grarrl Stamp', 'Chunk of Meat Stamp',
-            'Tyrannian Kyrii Stamp', 'Tyrannian JubJub Stamp', 'Tyrannian Korbat Stamp', 'Tyrannian Blumaroo Stamp', //'Tyrannian Plateau Stamp',
+            'Tyrannian Kyrii Stamp', 'Tyrannian JubJub Stamp', 'Tyrannian Korbat Stamp', 'Tyrannian Blumaroo Stamp', 'Tyrannian Plateau Stamp',
             'Flying Korbats Stamp', 'Stone Armchair Stamp', 'Giant Leaf Curtains Stamp', 'Bone Chair Stamp', 'Tyrannian Usul Stamp',
             //'Shiny Monoceraptor Stamp', 'Stone Stamp',
 
@@ -68,7 +68,7 @@
 
             // Lost Desert
             'Golden Khamette Stamp', 'Desert Petpet Stamp', 'Pyramid Sun Rise Stamp', 'Lost Desert Grarrl Stamp', 'Advisor Wessle Stamp',
-            'Senator Palpus Stamp', 'Midnight Desert Lupe Stamp', /*'Osiris Pottery Stamp',*/ 'Senator Barca Stamp',
+            'Senator Palpus Stamp', 'Midnight Desert Lupe Stamp', 'Osiris Pottery Stamp', 'Senator Barca Stamp',
             /*'Desert Paintbrush Stamp',*/ 'Peopatra Stamp', 'Grackle Bug Stamp', 'Princess Sankara Stamp', //'Lost Desert Scroll Stamp',
             'Lost Desert Sphinx Stamp', 'Tug Of War Stamp', 'Fruit Machine Stamp', 'Sakhmet Palace Stamp', 'Holographic Sakhmet City Stamp',
             'Geb Stamp', /*'Scarab Stamp',*/ 'Lucky Coin Stamp', 'Holographic Coltzans Shrine Stamp',
@@ -82,13 +82,13 @@
 
             // Battle for Meridell
             /*'Dark Graspberry Stamp',*/ 'Gelert Prince Stamp', /*'Sunblade Stamp', 'Meridell Gardens Stamp',*/ 'Petpet Growth Syrup Stamp',
-            /*'Zafara Princess Stamp',*/ 'Gallion Stamp', 'Quiggle Scout Stamp', /*'Blugthak Stamp',*/ 'Castle Defender Stamp',
+            'Zafara Princess Stamp', 'Gallion Stamp', 'Quiggle Scout Stamp', /*'Blugthak Stamp',*/ 'Castle Defender Stamp',
             /*'Usul-in-waiting Stamp', 'Blumaroo Court Jester Stamp',*/ 'King Skarl Plushie Stamp', 'Nova Storm Stamp', '105 Castle Secrets Stamp',
             'Exploding Acorns Stamp', /*'Zafara Double Agent Stamp', 'Battle Uni Stamp', 'Court Dancer Stamp', 'Hadrak Stamp',
             'Morguss Stamp', 'Meerca Spy Stamp', 'The Great Battle Stamp', 'Lord Kass Stamp', 'The Three Stamp',*/
 
             // NeoQuest II
-            /*'Trestin Stamp',*/ 'Librarian Stamp', /*'Rohanes Mother Stamp',*/ 'Temple Of The Sky Stamp', //'Hubrid Noxs Mountain Fortress Stamp',
+            /*'Trestin Stamp',*/ 'Librarian Stamp', /*'Rohanes Mother Stamp',*/ 'Temple Of The Sky Stamp', 'Hubrid Noxs Mountain Fortress Stamp',
             'NeoQuest II Logo Stamp', 'Devilpuss Stamp', /*'Celestial Talisman Stamp',*/ 'Slime Titan Stamp', //'Kolvars Stamp',
             'Rampaging Grundonoil Stamp', //'Northern Watch Tower Stamp', 'Lost City of Phorofor Stamp', 'Shadow Gulch Stamp', 'Von Roos Castle Stamp',
             'Velm Stamp', /*'Talinia Stamp',*/ 'Rohane Stamp', /*'Mipsy Stamp', 'Sword Of Apocalypse Stamp',
