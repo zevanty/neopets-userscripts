@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Show Specific Items - Collectable Sea Shells
-// @version      1.0.0.20240419
+// @version      1.1.0.20240419
 // @author       zevanty
 // @description  Show only specific items from Collectable Sea Shells shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=86(&type=shop)?$/
@@ -34,8 +34,10 @@
         ]);
         let style = document.createElement('style');
         style.type = 'text/css';
-        style.innerHTML = '.ignore {display:none}';
+        style.innerHTML = '.ignore {display:none} .allIgnored {font-size:20px !important}';
         head.appendChild(style);
+
+        let allIgnored = true;
 
         let divs = document.querySelectorAll('div.shop-item');
         divs.forEach(div => {
@@ -45,7 +47,18 @@
                 if (!ownedItems.has(item)) {
                     div.classList.add('ignore');
                 }
+                else {
+                    allIgnored = false;
+                }
             }
-        })
+        });
+
+        if (divs.length > 0 && allIgnored) {
+            let section = document.querySelector('form[name="items_for_sale"]');
+            let msg = document.createElement('p');
+            msg.classList.add("allIgnored");
+            msg.innerHTML = '<b>You have hidden everything. Refresh the page and try again.<b>'
+            section.appendChild(msg);
+        }
     }
 })();

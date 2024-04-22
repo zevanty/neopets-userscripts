@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Show Specific Items
-// @version      1.0.0
+// @version      1.1.0
 // @author       zevanty
 // @description  Show only specific items from a Neopian shop (edit the shop ID in the @include header). WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=1(&type=shop)?$/
@@ -16,8 +16,10 @@
         ]);
         let style = document.createElement('style');
         style.type = 'text/css';
-        style.innerHTML = '.ignore {display:none}';
+        style.innerHTML = '.ignore {display:none} .allIgnored {font-size:20px !important}';
         head.appendChild(style);
+
+        let allIgnored = true;
 
         let divs = document.querySelectorAll('div.shop-item');
         divs.forEach(div => {
@@ -27,7 +29,18 @@
                 if (!ownedItems.has(item)) {
                     div.classList.add('ignore');
                 }
+                else {
+                    allIgnored = false;
+                }
             }
-        })
+        });
+
+        if (allIgnored) {
+            let section = document.querySelector('form[name="items_for_sale"]');
+            let msg = document.createElement('p');
+            msg.classList.add("allIgnored");
+            msg.innerHTML = '<b>You have hidden everything. Refresh the page and try again.<b>'
+            section.appendChild(msg);
+        }
     }
 })();
