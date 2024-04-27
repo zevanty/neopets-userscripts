@@ -29,3 +29,10 @@ This will hide specific items from a Neopian shop.
 This will only show specific items from a Neopian shop.
 
 **Warning:** *THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.*
+
+## Neopian Shop - Show Items - Chocolate Factory (R90+)
+[userscript](shops-show-items-chocolate.user.js)
+
+Show only R90+ items in the Chocolate Factory shop for avatar purposes.
+
+**Warning:** *THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.*

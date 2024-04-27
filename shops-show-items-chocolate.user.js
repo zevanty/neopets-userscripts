@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Shops: Show Specific Items - Chocolate Factory
+// @name         Shops: Show Specific Items - Chocolate Factory (R90+)
 // @version      1.1.0.20240419
 // @author       zevanty
-// @description  Show only specific items from Chocolate Factory shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
+// @description  Show only R90+ items from Chocolate Factory shop for avatar purposes. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=14(&type=shop)?$/
 // ==/UserScript==
 
