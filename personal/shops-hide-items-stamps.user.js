@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Hide Specific Items - Neopian Post Office
-// @version      1.1.0.20240419
+// @version      1.1.0.20240502
 // @author       zevanty
 // @description  Hide specific items from Neopian Post Office shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=58(&type=shop)?$/
@@ -55,9 +55,9 @@
             // Snowy Valley
             'Snow Wars Catapult Stamp', 'Rainbow Slushie Stamp', 'Frosty Snowman Stamp', 'Wintery Petpet Shop Stamp', 'Wintery Bruce Stamp',
             'Christmas Meerca Stamp', 'Terror Mountain Scene Stamp', 'Igloo Garage Sale Stamp', /*'Rink Runner Stamp',*/ 'Christmas Kougra Stamp',
-            'Christmas Uni Stamp', /*'Christmas Zafara Stamp', 'Scratchcard Kiosk Stamp',*/ 'Grundo Snow Throw Stamp',
+            'Christmas Uni Stamp', /*'Christmas Zafara Stamp',*/ 'Scratchcard Kiosk Stamp', 'Grundo Snow Throw Stamp',
             'Stocking Stamp', /*'Cliffhanger Stamp', 'Christmas Scene Stamp',*/ 'SHFISS Stamp', //'Negg Faerie Stamp',
-            'Snow Faerie Stamp', /*'Ski Lodge Stamp', 'Snowager Stamp',*/ 'Snowbunny Stamp', 'Sticky Snowflake Stamp',
+            'Snow Faerie Stamp', /*'Ski Lodge Stamp', 'Snowager Stamp', 'Snowbunny Stamp', 'Sticky Snowflake Stamp',*/
 
             // Meridell vs Darigan
             /*'Meridell Heroes Stamp', 'Darigan Citadel Stamp', 'Meridell Castle Stamp', 'Green Knight Stamp', 'Lisha vs Zombie Lisha Stamp',
@@ -99,21 +99,21 @@
             'Commemorative Defenders Stamp #2', 'Grand Theft Ummagine Stamp', 'Shenkuu Bridge Stamp', 'Suteks Tomb Stamp', 'Attack of the Slorgs Stamp',
             'Pile of Dung Stamp', /*'Faerie Bubbles Stamp', 'Commemorative Defenders Stamp #3',*/ 'Bottled Faerie Stamp',
             'Mystery Island Travel Stamp', /*'Shenkuu Mask Stamp', 'Hot Dog Hero Stamp', 'Rainbow Pteri Feather Stamp', 'Commemorative Defenders Stamp #4',
-            'Altador Travel Stamp', 'Gold Mote Stamp', 'Count Von Roo Plushie Stamp', 'Ready to Roll Stamp',*/ 'Lab Ray Stamp',
+            'Altador Travel Stamp', 'Gold Mote Stamp', 'Count Von Roo Plushie Stamp', 'Ready to Roll Stamp', 'Lab Ray Stamp',*/
 
             // Maraquan
             'Maractite Dagger Stamp', 'Piraket Stamp', 'Seaweed Necklace Stamp', 'Petty Crewmate Stamp', 'Maraquan Defenders Stamp',
-            'Pirate Attack Stamp', /*'Goregas Stamp',*/ 'The Black Pawkeet Stamp', //'Scurvy Island Stamp', 'New Maraqua Stamp',
+            'Pirate Attack Stamp', /*'Goregas Stamp', 'The Black Pawkeet Stamp', 'Scurvy Island Stamp',*/ 'New Maraqua Stamp',
             'Pirate Troops Stamp', 'Maraquan Troops Stamp', /*'Chasm Beast Stamp', 'The Drenched Stamp', 'Maraquan Charger Stamp',
             'Maraquan Blade Specialist Stamp', 'Garin To The Rescue Stamp', 'Caylis Stamp', 'Swordsmaster Talek Stamp', 'The Revenge Stamp',
-            'Jacques Stamp', 'Garin Stamp', 'Isca Stamp',*/ 'Captain Scarblade Stamp', //'King Kelpbeard Stamp',
+            'Jacques Stamp', 'Garin Stamp', 'Isca Stamp', 'Captain Scarblade Stamp', 'King Kelpbeard Stamp',*/
 
             // Altador
             'Siyana Stamp', 'First Edition Altador Petpet Stamp', 'Fauna Stamp', 'Jerdana Stamp', 'The Wave Stamp',
             'Marak Stamp', 'Altadorian Farmer Stamp', 'Gordos Stamp', 'Psellia Stamp', 'Second Edition Altador Petpet Stamp',
             'Perfectly Flat Rock Stamp', /*'Kelland Stamp',*/ 'Altador Food Stamp', /*'Florin Stamp', 'Astronomy Club Stamp',
             'Finneus Stamp', 'Altador Magic Stamp', 'The Sleeper Constellation Stamp', 'Torakor Stamp',*/ 'Angry Janitor Stamp',
-            'Darkest Faerie Stamp', /*'Sasha Stamp',*/ 'King Altador Stamp',
+            'Darkest Faerie Stamp', /*'Sasha Stamp', 'King Altador Stamp',*/
 
             // Shenkuu
             'Shenkuu City Stamp', 'Kentari Stamp', 'Negg Noodles Stamp', 'Linae Stamp', 'Shenkuu Lunar Temple Stamp',
