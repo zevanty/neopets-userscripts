@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Hide Specific Items - Neopian Post Office
-// @version      1.1.0.20240502
+// @version      1.1.0.20240621
 // @author       zevanty
 // @description  Hide specific items from Neopian Post Office shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=58(&type=shop)?$/
@@ -22,7 +22,7 @@
             'Grimilix Stamp', 'Neopet Version 2 Stamp', 'Gormball Stamp', 'Splat-A-Sloth Stamp', //'Dr. Sloth Stamp',
             /*'Space Faerie Stamp',*/ 'Grinning Sloth Stamp', 'Zygorax Stamp', 'Purple Grundo Stamp',
             'Roast Gargapple Stamp', 'N4 Bot Stamp', 'Blarthrox Stamp', //'Tazzalor Stamp', 'Zyrolon Stamp',
-            'Advert Attack Stamp', /*'Evil Fuzzles Stamp', 'Gargarox Isafuhlarg Stamp', 'Mutant Grundo Stamp', 'Zurroball Stamp',
+            'Advert Attack Stamp', 'Evil Fuzzles Stamp', /*'Gargarox Isafuhlarg Stamp', 'Mutant Grundo Stamp', 'Zurroball Stamp',
             'Double Printed Evil Fuzzle Stamp', 'Inverted Space Faerie Stamp', 'Grundo Warehouse Stamp', 'Virtupets Space Station Stamp', 'Holographic Virtupets Stamp',*/
 
             // Tyrannia

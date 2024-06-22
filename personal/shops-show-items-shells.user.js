@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Show Specific Items - Collectable Sea Shells
-// @version      1.1.0.20240419
+// @version      1.1.0.20240621
 // @author       zevanty
 // @description  Show only specific items from Collectable Sea Shells shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=86(&type=shop)?$/
@@ -19,16 +19,16 @@
             'Tiny Golden Shell', 'Matching Pastel Shells', 'Royal Orange Cowry Shell', 'Purple Twirly Shell', 'Golden Shell',
 
             // Treasures of the Deep
-            /*'Circlet of the Deep', 'Shell Comb', 'Tiara of the Deep',*/ 'Shell Clutch',
+            /*'Circlet of the Deep', 'Shell Comb',*/ 'Golden Koi of the Deep', /*'Tiara of the Deep',*/ 'Shell Clutch',
             /*'Hair Clip of the Deep', 'Hairpin of the Deep', 'Bangles of the Deep',
             'Armlet of the Deep',*/ 'Diadem of the Deep',
             'Enameled Peophin Brooch of the Deep', 'Coronet of the Deep',
             'Exquisite Peophin Ring of the Deep', 'Anklet of the Deep', 'Choker of the Deep',
 
             // Maractite Coins
-            /*'Squared Maractite Coin', 'Half Maractite Coin', 'Triangular Maractite Coin', 'Maractite Koi Maractite Coin', 'Seaweed Design Maractite Coin',*/
-            //'Dual Tone Maractite Coin', 'Worn Maractite Coin',
-            'Maraquan Kau Maractite Coin', //'Runed Maractite Coin', 'Rusty Sloth Clone Maractite Coin',
+            /*'Squared Maractite Coin', 'Half Maractite Coin', 'Triangular Maractite Coin', 'Maractite Koi Maractite Coin', 'Seaweed Design Maractite Coin',
+            'Dual Tone Maractite Coin', 'Worn Maractite Coin',
+            'Maraquan Kau Maractite Coin', 'Runed Maractite Coin', 'Rusty Sloth Clone Maractite Coin',*/
             'Maraquan Skeith Maractite Coin', 'Maraquan Draik Maractite Coin', 'Large Maractite Coin',
             'Streaked Maractite Coin', 'Floral Maractite Coin',
         ]);
