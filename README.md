@@ -36,3 +36,10 @@ This will only show specific items from a Neopian shop.
 Show only R90+ items in the Chocolate Factory shop for avatar purposes.
 
 **Warning:** *THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.*
+
+## Neopian Shop - Auto-fill Haggle Price
+[userscript](shops-autofill-haggle-price.user.js)
+
+Automatically fill the haggle price. Also moves the captcha to the left.
+
+**Warning:** *THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.*
