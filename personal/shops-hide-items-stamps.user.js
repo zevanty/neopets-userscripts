@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Hide Specific Items - Neopian Post Office
-// @version      1.1.0.20240621
+// @version      1.1.0.20241123
 // @author       zevanty
 // @description  Hide specific items from Neopian Post Office shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=58(&type=shop)?$/
@@ -42,7 +42,7 @@
             'Alien Aisha Vending Stamp', 'Orange Skeith Stamp', 'Skeith Bank Manager Stamp', 'Robot Skeith Stamp', 'Huberts Hot Dogs Stamp',
             'Wishing Well Stamp', 'Money Tree Stamp', /*'Rainbow Pool Stamp',*/ 'Kauvara Stamp', 'Shop Wizard Stamp',
             'Book Shop Nimmo Stamp', 'Neolodge Stamp',
-            'Deluxe Money Tree Stamp', /*'Neopian Hospital Stamp',*/ 'Jelly Pop Stamp', 'Jelly World Stamp', /*'Usukiland Stamp',
+            'Deluxe Money Tree Stamp', 'Neopian Hospital Stamp', 'Jelly Pop Stamp', 'Jelly World Stamp', /*'Usukiland Stamp',
             'Super Bright Rainbow Pool Stamp', 'Foil Food Shop Stamp', 'Chocolate Factory Stamp', 'Neopia Central Scene Stamp',*/
 
             // NeoQuest
@@ -54,15 +54,15 @@
 
             // Snowy Valley
             'Snow Wars Catapult Stamp', 'Rainbow Slushie Stamp', 'Frosty Snowman Stamp', 'Wintery Petpet Shop Stamp', 'Wintery Bruce Stamp',
-            'Christmas Meerca Stamp', 'Terror Mountain Scene Stamp', 'Igloo Garage Sale Stamp', /*'Rink Runner Stamp',*/ 'Christmas Kougra Stamp',
-            'Christmas Uni Stamp', /*'Christmas Zafara Stamp',*/ 'Scratchcard Kiosk Stamp', 'Grundo Snow Throw Stamp',
+            'Christmas Meerca Stamp', 'Terror Mountain Scene Stamp', 'Igloo Garage Sale Stamp', 'Rink Runner Stamp', 'Christmas Kougra Stamp',
+            'Christmas Uni Stamp', 'Christmas Zafara Stamp', 'Scratchcard Kiosk Stamp', 'Grundo Snow Throw Stamp',
             'Stocking Stamp', /*'Cliffhanger Stamp', 'Christmas Scene Stamp',*/ 'SHFISS Stamp', //'Negg Faerie Stamp',
             'Snow Faerie Stamp', /*'Ski Lodge Stamp', 'Snowager Stamp', 'Snowbunny Stamp', 'Sticky Snowflake Stamp',*/
 
             // Meridell vs Darigan
             /*'Meridell Heroes Stamp', 'Darigan Citadel Stamp', 'Meridell Castle Stamp', 'Green Knight Stamp', 'Lisha vs Zombie Lisha Stamp',
             'Morris Stamp', 'Skeith Defender Stamp', 'Darigan Moehog Stamp', 'Boris Stamp',*/ 'Draik Guard Stamp',
-            /*'Yellow Knight Stamp', 'Meridell Shield Stamp', 'Drackonack Stamp',*/ 'Darigan Shield Stamp', 'Darigan Eyrie Stamp',
+            'Yellow Knight Stamp', /*'Meridell Shield Stamp', 'Drackonack Stamp',*/ 'Darigan Shield Stamp', 'Darigan Eyrie Stamp',
             'Turmaculus Stamp', 'Darigan Elemental Stamp', 'Illusen Stamp', 'Jeran Stamp', 'Golden Orb Stamp',
             /*'Zombified Heroes Stamp',*/ 'Lord Darigan Stamp', 'King Skarl Stamp', 'Master Vex Stamp', //'Darigan Spectre Stamp',
 
@@ -75,15 +75,15 @@
 
             // The Battledome
             'Sword of Skardsen Stamp', 'Attack Pea Stamp', 'Slorg Flakes Stamp', 'Faerie Slingshot Stamp', 'Hubrids Puzzle Box Stamp',
-            'Eraser of the Dark Faerie Stamp', /*'Jhudoras Bewitched Ring Stamp',*/ 'Everlasting Crystal Apple Stamp', 'Sword of the Air Faerie Stamp', /*'Jewelled Scarab Stamp',
-            'Rod Of Dark Nova Stamp', 'Jade Scorchstone Stamp',*/ 'Thyoras Tear Stamp', 'Exploding Space Bugs Stamp', 'Monoceraptor Claw Stamp',
+            'Eraser of the Dark Faerie Stamp', /*'Jhudoras Bewitched Ring Stamp',*/ 'Everlasting Crystal Apple Stamp', 'Sword of the Air Faerie Stamp', 'Jewelled Scarab Stamp',
+            /*'Rod Of Dark Nova Stamp', 'Jade Scorchstone Stamp',*/ 'Thyoras Tear Stamp', 'Exploding Space Bugs Stamp', 'Monoceraptor Claw Stamp',
             /*'Wand Of The Dark Faerie Stamp', 'Alien Aisha Myriad Stamp',*/ 'Alien Aisha Ray Gun Stamp', //'Kings Lens Stamp',
             'Illusens Staff Stamp', 'Shield Of Pion Troect Stamp', //'Rainbow Sticky Hand Stamp', 'Dark Battle Duck Stamp', 'Battle Slices Stamp',
 
             // Battle for Meridell
-            /*'Dark Graspberry Stamp',*/ 'Gelert Prince Stamp', /*'Sunblade Stamp', 'Meridell Gardens Stamp',*/ 'Petpet Growth Syrup Stamp',
+            /*'Dark Graspberry Stamp',*/ 'Gelert Prince Stamp', /*'Sunblade Stamp',*/ 'Meridell Gardens Stamp', 'Petpet Growth Syrup Stamp',
             'Zafara Princess Stamp', 'Gallion Stamp', 'Quiggle Scout Stamp', /*'Blugthak Stamp',*/ 'Castle Defender Stamp',
-            /*'Usul-in-waiting Stamp', 'Blumaroo Court Jester Stamp',*/ 'King Skarl Plushie Stamp', 'Nova Storm Stamp', '105 Castle Secrets Stamp',
+            /*'Usul-in-waiting Stamp', 'Blumaroo Court Jester Stamp', 'King Skarl Plushie Stamp',*/ 'Nova Storm Stamp', '105 Castle Secrets Stamp',
             'Exploding Acorns Stamp', /*'Zafara Double Agent Stamp', 'Battle Uni Stamp', 'Court Dancer Stamp', 'Hadrak Stamp',
             'Morguss Stamp', 'Meerca Spy Stamp', 'The Great Battle Stamp', 'Lord Kass Stamp', 'The Three Stamp',*/
 
@@ -111,16 +111,16 @@
             // Altador
             'Siyana Stamp', 'First Edition Altador Petpet Stamp', 'Fauna Stamp', 'Jerdana Stamp', 'The Wave Stamp',
             'Marak Stamp', 'Altadorian Farmer Stamp', 'Gordos Stamp', 'Psellia Stamp', 'Second Edition Altador Petpet Stamp',
-            'Perfectly Flat Rock Stamp', /*'Kelland Stamp',*/ 'Altador Food Stamp', /*'Florin Stamp', 'Astronomy Club Stamp',
+            'Perfectly Flat Rock Stamp', 'Kelland Stamp', 'Altador Food Stamp', /*'Florin Stamp', 'Astronomy Club Stamp',
             'Finneus Stamp', 'Altador Magic Stamp', 'The Sleeper Constellation Stamp', 'Torakor Stamp',*/ 'Angry Janitor Stamp',
             'Darkest Faerie Stamp', /*'Sasha Stamp', 'King Altador Stamp',*/
 
             // Shenkuu
             'Shenkuu City Stamp', 'Kentari Stamp', 'Negg Noodles Stamp', 'Linae Stamp', 'Shenkuu Lunar Temple Stamp',
             'Orange Draik Stamp', 'Captain Tuan Stamp', 'Anshu Stamp', 'Enchanted Pudao Stamp', 'Kazeriu Stamp',
-            'Bonju Stamp', 'Pineapple Dessert Stamp', 'Cyodrakes Gaze Logo Stamp', /*'Kou-Jong Tile Stamp', 'Kentari Spyglass Stamp',
-            'Hoban Stamp', 'Thoughtful Linae Stamp', 'Orrin Stamp', 'Shumi Telescope Stamp', 'Biyako Stamp',
-            'The Cyodrakes Gaze Stamp', 'Anshu Fishing Stamp', 'Wise Gnorbu Stamp', 'Quilin Stamp', 'Shenkuu Stamp',*/
+            'Bonju Stamp', 'Pineapple Dessert Stamp', 'Cyodrakes Gaze Logo Stamp', /*'Kou-Jong Tile Stamp',*/ 'Kentari Spyglass Stamp',
+            //'Hoban Stamp', 'Thoughtful Linae Stamp', 'Orrin Stamp', 'Shumi Telescope Stamp', 'Biyako Stamp',
+            'The Cyodrakes Gaze Stamp', 'Anshu Fishing Stamp', /*'Wise Gnorbu Stamp', 'Quilin Stamp', 'Shenkuu Stamp',*/
 
             // Other II
             'Veggie Pizza Stamp', 'Plesio Stamp', 'Hannah Stamp', 'Shenkuu Draik Stamp',
@@ -144,22 +144,22 @@
             /*'Lampwyck Stamp', 'Igneots Cavern Stamp',*/ 'Lava Monster Stamp', //'Igneot Stamp',
 
             // Qasala
-            'Words of Antiquity Stamp', 'Qasalan Delights Stamp', 'Ancient Contract Stamp',
+            'Words of Antiquity Stamp', 'Qasalan Delights Stamp', 'Ancient Contract Stamp', //'Nabile & Tomos Stamp',
             'Qasalan Coffee Set Stamp', 'Qasalan Tablet Stamp', 'Trapped Tomos Stamp',
-            'Ruins of Qasala Stamp', /*'Qasalan Mummy Stamp',*/ 'Scorchio Mummy Stamp', 'Desert Arms Stamp',
+            'Ruins of Qasala Stamp', 'Qasalan Mummy Stamp', 'Scorchio Mummy Stamp', 'Desert Arms Stamp',
             /*'Lupe Shopkeeper Stamp', 'Razul Stamp', 'Dark Qasala Stamp', 'Scordrax Stamp',
             'Tomos Stamp', 'Nabile Stamp', 'Nightsteed Stamp', 'King Jazan Stamp',*/
 
             // Krawk Island
             'Krawk Island Governor Stamp', 'Riches of Krawk Island Stamp', 'Mellow Marauders Plushie Stamp', 'Drooling Quadrapus Stamp', 'Petpet Cannonball Stamp',
             /*'Captain Bloodhook Stamp',*/ 'The Lighthouse Stamp', /*'Buried Treasure Stamp',*/ 'Bug Eye McGee Stamp', 'Docked Ship Stamp',
-            'Smugglers Cove Stamp', 'Dubloon-O-Matic Stamp',
+            'Smugglers Cove Stamp', /*'Feldon Dinksy Collibridge Stamp', 'Fred the Tuskaninny Sailor Stamp',*/ 'Dubloon-O-Matic Stamp',
             /*'Dorak Stamp', 'The Krawken Stamp', 'The Academy Stamp', 'Forgotten Shore Stamp',
             'Capn Threelegs Stamp', 'Golden Dubloon Stamp', 'Grimtooth Stamp',*/
 
             // Neovia
             'Young Sophie Stamp', 'Rusty Door Stamp', 'Crumpetmonger Stamp', 'Neovia Stamp',
-            'Guard Zomutt Stamp', 'Bruno Stamp', 'Family Portrait Stamp',
+            'Guard Zomutt Stamp', 'Bruno Stamp', /*'Neovian Printing Press Shopkeeper Stamp',*/ 'Family Portrait Stamp',
             'Spirit of Slumber Stamp',
             //'Sentient Headstones Stamp', 'RIP Lucy Stamp', 'Mr. Krawley Stamp', 'Dark Ilere Stamp',
 

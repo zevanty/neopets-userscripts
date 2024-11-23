@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Hide Specific Items - Collectable Coins
-// @version      1.1.0.20240621
+// @version      1.1.0.20241123
 // @author       zevanty
 // @description  Hide specific items from Collectable Coins shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=68(&type=shop)?$/
@@ -12,11 +12,11 @@
     if (head) {
         const ownedItems = new Set([
             // Coins
-            'Silver Babaa Coin', 'Book Coin', 'Brass Usuki Coin', 'Money Tree Coin', 'Rainbow Pool Coin',
-            'Eliv Thade Coin', 'Turtum Coin', 'Silver Buzzer Coin', 'Snow PaintBrush Coin', 'Frozen Snowflake Coin',
-            'Silver Concert Hall Coin', 'Hasee Coin', /*'Bronze Mystery Island Coin',*/ 'Golden Scarab Coin', 'Giant Ghostkerchief Coin',
+            /*'Silver Babaa Coin', 'Book Coin', 'Brass Usuki Coin', 'Money Tree Coin', 'Rainbow Pool Coin',
+            'Eliv Thade Coin', 'Turtum Coin', 'Silver Buzzer Coin', 'Snow PaintBrush Coin',*/ 'Frozen Snowflake Coin',
+            /*'Silver Concert Hall Coin', 'Hasee Coin',*/ 'Bronze Mystery Island Coin', /*'Golden Scarab Coin', 'Giant Ghostkerchief Coin',
             'Defenders Of Neopia Coin', 'Goo Blaster Coin', 'Larnikin Coin', 'PaintBrush Coin', 'Chocolate Factory Coin',
-            'Battledome Coin', 'Dr Sloth Coin', 'Crystal Kauvara Coin', 'Neopian Times Coin', 'Emerald Eyrie Coin',
+            'Battledome Coin', 'Dr Sloth Coin', 'Crystal Kauvara Coin', 'Neopian Times Coin', 'Emerald Eyrie Coin',*/
 
             // Space Station Coins
             'Grundo Veggieballs Coin', 'Grobleen Salad Coin', 'Cosmic Cheese Stars Coin', //'Roast Gargapple Coin', 'Zoomik Coin',

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Show Specific Items - Toy Shop
-// @version      1.1.0.20240621
+// @version      1.1.0.20241123
 // @author       zevanty
 // @description  Show only specific items from Toy Shop shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=3(&type=shop)?$/
@@ -14,7 +14,7 @@
             // Charms
             /*'Nimmo Gnome Collectable Charm', 'Chia Gnome Collectable Charm', 'Yellow PaintBrush Collectable Charm', 'Bika Collectable Charm', 'Chomby Gnome Collectable Charm',
             'Green PaintBrush Collectable Charm', 'Flower Trumpet Collectable Charm', 'Tagobo Potion Collectable Charm', 'Bori Gnome Collectable Charm',*/
-            'Glyme Collectable Charm', 'Faerie Techo Plushie Collectable Charm', /*'Schnelly Collectable Charm',*/ 'Red PaintBrush Collectable Charm', 'Pinchit Collectable Charm',
+            'Glyme Collectable Charm', 'Faerie Techo Plushie Collectable Charm', /*'Schnelly Collectable Charm', 'Red PaintBrush Collectable Charm', 'Pinchit Collectable Charm',*/
             'Faerie Buzz Plushie Collectable Charm', 'Tigerfruit Collectable Charm', 'Blue PaintBrush Collectable Charm',
             'Cyodrake Collectable Charm', 'Gallion Collectable Charm', 'Techo Statue Collectable Charm', 'Taiko Standing Drum Collectable Charm', 'Elephante Lamp Collectable Charm',
 
@@ -24,6 +24,10 @@
             'Hagan Collectable Charm',
             'Wherfy Collectable Charm',
             'Sloth Collectable Charm',
+
+            // Random
+            'Neopets 25th Birthday Goodie Bag', 'Halloween Y14 Goodie Bag', 'Usukicon Y26 Goodie Bag',
+            'Acara Booster Pack', 'Lupe Booster Pack', 'Uni Booster Pack',
         ]);
         let style = document.createElement('style');
         style.type = 'text/css';

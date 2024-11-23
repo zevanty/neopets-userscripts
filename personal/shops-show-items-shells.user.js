@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Shops: Show Specific Items - Collectable Sea Shells
-// @version      1.1.0.20240621
+// @version      1.1.0.20241123
 // @author       zevanty
 // @description  Show only specific items from Collectable Sea Shells shop. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
 // @include      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=86(&type=shop)?$/
@@ -19,7 +19,7 @@
             'Tiny Golden Shell', 'Matching Pastel Shells', 'Royal Orange Cowry Shell', 'Purple Twirly Shell', 'Golden Shell',
 
             // Treasures of the Deep
-            /*'Circlet of the Deep', 'Shell Comb',*/ 'Golden Koi of the Deep', /*'Tiara of the Deep',*/ 'Shell Clutch',
+            /*'Circlet of the Deep', 'Shell Comb',*/ 'Golden Koi of the Deep', /*'Tiara of the Deep', 'Shell Clutch',*/
             /*'Hair Clip of the Deep', 'Hairpin of the Deep', 'Bangles of the Deep',
             'Armlet of the Deep',*/ 'Diadem of the Deep',
             'Enameled Peophin Brooch of the Deep', 'Coronet of the Deep',
