@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Shops: Auto-fill Haggle Price
-// @version      1.0.0
+// @version      1.0.1
 // @author       zevanty
 // @description  Automatically fill the haggle price and moves the captcha all the way to the left. WARNING: THIS IS PRETTY MUCH CHEATING. USE AT YOUR OWN RISK.
-// @include      /^https:\/\/www\.neopets\.com\/haggle\.phtml\?/
+// @include      /^https:\/\/www\.neopets\.com\/haggle\.phtml/
 // ==/UserScript==
 
 (function() {
