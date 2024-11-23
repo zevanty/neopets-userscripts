@@ -9,6 +9,11 @@ This will redirect the page to use Classic UI. I generally prefer the look-and-f
 
 **Note:** Some pages (mainly map pages) require Flash to see the page content.
 
+## Wishing Well - Auto-fill Wish
+[userscript](wishing-well-autofill.user.js)
+
+This will automatically fill in the form for the Wishing Well. Technically not cheating since you still need to manually submit the wish.
+
 ## Neocola Machine - Generate More NP
 [userscript](neocola-machine-more-np.user.js)
 
