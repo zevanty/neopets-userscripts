@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.3
+// @version      1.0.4
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
-// @include      /^https?:\/\/www\.neopets\.com\/(explore|trudys_surprise|market_plaza|market_bazaar)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/(trudys_surprise|market_plaza|market_bazaar)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/explore\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/altador\/(index)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/desert\/(index|qasala|sakhmet|shrine)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/halloween\/(index|index_fair|neovia)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/faerieland\/(caverns\/)?(index|faeriecity|springs|tdmbgpop)\.phtml(\/springs.phtml)?$/
 // @include      /^https?:\/\/www\.neopets\.com\/island\/(haiku\/)?(index|haiku|mystichut)\.phtml$/
-// @include      /^https?:\/\/www\.neopets\.com\/jelly\/(index|jelly)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/jelly\/(index|jelly)\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/magma\/(index|caves)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/medieval\/(index|index_castle|index_evil|index_farm|brightvale)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/moon\/(index)\.phtml\/?$/
@@ -26,10 +27,18 @@
 
     let currUrl = location.toString();
 
-    // Kreludor HTML map no longer exist on Neopets server
-    if (currUrl.endsWith('/moon/index.phtml/')) {
-        // Alternative location: https://www.jellyneo.net/images/tourguide/kreludor_2005_01.gif
-        document.querySelector('img[usemap="#moon"]').setAttribute('src', 'https://zevanty.github.io/neopets-userscripts/assets/kreludor_2005_01.gif');
+    // Some HTML maps are missing on the servers
+    if (/\/(jelly|moon)\/index\.phtml\/$/.test(currUrl)) {
+        missingHtmlMap(currUrl);
+    }
+
+    // Fix Tyrannia URL in the World Map
+    else if (currUrl.endsWith('/explore.phtml/')) {
+        let items = document.querySelectorAll('a[href="prehistoric/index.phtml"]');
+        items.forEach(item => {
+            let itemUrl = item.getAttribute('href');
+            item.setAttribute('href', '/' + itemUrl);
+        });
     }
 
     // Fix Healing Spring purchase page on Classic UI
@@ -53,5 +62,27 @@
         }
     }
 
+    function missingHtmlMap(url) {
+        let attr = '';
+        let fileName = '';
+
+        // Jelly World
+        if (url.endsWith('/jelly/index.phtml/')) {
+            attr = 'jellymap_Map';
+            fileName = 'jelly_2005_06.gif';
+        }
+        // Kreludor
+        else if (url.endsWith('/moon/index.phtml/')) {
+            attr = 'moon';
+            fileName = 'kreludor_2005_01.gif';
+        }
+        else {
+            alert('ERROR! UNKNOWN URL');
+            return;
+        }
+
+        // Alternative location: https://www.jellyneo.net/images/tourguide/<fileName>
+        document.querySelector('img[usemap="#' + attr +'"]').setAttribute('src', 'https://zevanty.github.io/neopets-userscripts/assets/' + fileName);
+    }
 
 })();
