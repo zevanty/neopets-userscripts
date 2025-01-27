@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.4
+// @version      1.0.5
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
-// @include      /^https?:\/\/www\.neopets\.com\/(trudys_surprise|market_plaza|market_bazaar)\.phtml$/
-// @include      /^https?:\/\/www\.neopets\.com\/explore\.phtml\/?$/
+// @include      /^https?:\/\/www\.neopets\.com\/(trudys_surprise|nf|market_plaza|market_bazaar)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/(explore|generalstore)\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/altador\/(index)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/desert\/(index|qasala|sakhmet|shrine)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/halloween\/(index|index_fair|neovia)\.phtml$/
@@ -21,6 +21,7 @@
 // @include      /^https?:\/\/www\.neopets\.com\/shenkuu\/(index)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/winter\/(index|icecaves|terrormountain|wintercelebration)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/worlds\/(index_geraptiku|index_kikolake|index_roo)\.phtml$/
+// @match        https://www.jellyneo.net/?go=dailies
 // ==/UserScript==
 (function() {
     'use strict';
@@ -50,6 +51,34 @@
             item.setAttribute('href', headerUrl + itemUrl);
         });
     }
+
+    // Fix General Store purchase page on Classic UI
+    else if (currUrl.endsWith('/generalstore.phtml/')) {
+
+        // Ensure purchase page is Classic UI
+        let item = document.querySelector('form[action="/generalstore.phtml"]');
+        if (item) {
+            let itemUrl = item.getAttribute('action');
+            item.setAttribute('action', itemUrl + '/');
+        }
+        // We should now be in purchase page. Ensure leaving page will go back to General Store Classic UI
+        else {
+            item = document.querySelector('input[value="Back to Shop"]');
+            if (item) {
+                let itemUrl = item.getAttribute('onclick');
+                item.setAttribute('onclick', 'window.location=\'/generalstore.phtml/\';');
+            }
+        }
+    }
+
+    // Make sure Jellyneo's Dailies link to Rich Slorg page is to Classic
+    else if (currUrl.includes('jellyneo.net')) {
+        let items = document.querySelectorAll('a[href="https://www.neopets.com/shop_of_offers.phtml?slorg_payout=yes"]');
+        items.forEach(item => {
+            item.setAttribute('href', 'https://www.neopets.com/shop_of_offers.phtml/?slorg_payout=yes');
+        });
+    }
+
 
     // Perform the redirect
     else {
