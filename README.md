@@ -14,6 +14,11 @@ This will redirect the page to use Classic UI. I generally prefer the look-and-f
 
 This will automatically fill in the form for the Wishing Well. Technically not cheating since you still need to manually submit the wish.
 
+## Lunar Temple - Puzzle Solver
+[userscript](lunar-temple=solver.user.js)
+
+This will highlight the correct answer in Lunar Temple. Technically not cheating since you still need to manually submit the answer.
+
 ## Neocola Machine - Generate More NP
 [userscript](neocola-machine-more-np.user.js)
 
