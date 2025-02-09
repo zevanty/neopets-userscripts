@@ -9,6 +9,21 @@ This will redirect the page to use Classic UI. I generally prefer the look-and-f
 
 **Note:** Some pages (mainly map pages) require Flash to see the page content.
 
+## Additional Navigation
+[userscript](additional-navigations.user.js)
+
+This adds additional navigation links to different pages **except** shop pages as I want those pages to load as fast as possible.
+
+**New UI**
+* Inventory to sub-navigation
+* Closet under the profile navigation's _Inventory_ option
+* Neodeck under the profile navigation's _My Albums_ option
+* Replaces profile navigation's _My Pets_ URL with the Quick Reference URL
+
+**Old UI**
+* Quest Log and the current plot under main navigation's _Explore_ option
+* Quick Stock and Gallery to the sub-navigation
+
 ## Wishing Well - Auto-fill Wish
 [userscript](wishing-well-autofill.user.js)
 
