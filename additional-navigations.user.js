@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Additional Navigations
-// @version      1.0.0
+// @version      1.0.1
 // @author       zevanty
 // @description  Add additional navigations (links) to pages except to shops for performance purposes.
-// @include      https://www.neopets.com/*
+// @include      /^https:\/\/(www|ncmall)\.neopets\.com\//
 // @exclude      /^https:\/\/www\.neopets\.com\/objects\.phtml\?(type=shop&)?obj_type=\d+(&type=shop)?$/
 // @exclude      https://www.neopets.com/haggle.phtml?*
 // ==/UserScript==
@@ -156,17 +156,24 @@
             subNavClosetLink.insertAdjacentHTML('beforebegin', ' | <a href=\'/gallery/index.phtml\'>Gallery</a>');
         }
 
-        function appendToExploreOldNav(name, url) {
+        function appendToExploreOldNav(name, urlPath) {
+            let urlPrefix = '/';
+            let currUrl = location.toString();
+            if (currUrl.startsWith('https://ncmall.neopets.com/')) {
+                urlPrefix = 'https://www.neopets.com/'
+            }
+
             let navExploreBlock = document.querySelector('ul#template_nav > li:nth-of-type(4) > ul.dropdown');
 
             let navCurrentPlotLink = document.createElement('a');
-            navCurrentPlotLink.setAttribute('href', '/' + url);
+            navCurrentPlotLink.setAttribute('href', urlPrefix + urlPath);
             navCurrentPlotLink.innerHTML = '» ' + name;
 
             let navCurrentPlotBlock = document.createElement('li');
 
             navCurrentPlotBlock.appendChild(navCurrentPlotLink);
             navExploreBlock.appendChild(navCurrentPlotBlock);
+
         }
 
     }
