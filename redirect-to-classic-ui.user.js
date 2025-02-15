@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.6
+// @version      1.0.7
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
-// @include      /^https?:\/\/www.neopets.com\/?$/
+// @include      /^https?:\/\/www.neopets.com\/?(index\.phtml)?$/
 // @include      /^https?:\/\/www\.neopets\.com\/(trudys_surprise|nf|market_plaza|market_bazaar)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/(explore|generalstore)\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/altador\/(index)\.phtml$/
@@ -81,18 +81,15 @@
     }
 
     // Skip the "main" page ("World of Neopets") and go directly to the "home" page
-    else if (currUrl.match(/^https?:\/\/www.neopets.com\/?$/)) {
-        let additionalSlash = '';
-        if (!currUrl.endsWith('/')) {
-            additionalSlash = '/';
-        }
+    else if (currUrl.match(/^https?:\/\/www.neopets.com\/?(index\.phtml)?$/)) {
+        let homeUrl = 'https://www.neopets.com/home/';
 
         // This may not work on certain browsers
-        location.href = location + additionalSlash + "home/";
+        location.href = homeUrl;
 
         // Backup in case the previous doesn't work
         window.onload = function() {
-            location.href = location + additionalSlash + "home/";
+            location.href = homeUrl;
         }
     }
 
