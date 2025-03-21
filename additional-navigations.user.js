@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Additional Navigations
-// @version      1.0.1
+// @version      1.0.2
 // @author       zevanty
 // @description  Add additional navigations (links) to pages except to shops for performance purposes.
 // @include      /^https:\/\/(www|ncmall)\.neopets\.com\//
@@ -144,7 +144,7 @@
          * Old UI: Add Quick Stock to the sub-navigation found in certain pages like shops
          */
         function quickStockOldSubNav() {
-            let subNavClosetLink = document.querySelector('td.content > div.medText > a:nth-of-type(9)');
+            let subNavClosetLink = document.querySelector('td.content div.medText > a:nth-of-type(9)');
             subNavClosetLink.insertAdjacentHTML('beforebegin', '<a href=\'/quickstock.phtml\'>Quick Stock</a> | ');
         }
 
@@ -152,8 +152,8 @@
          * Old UI: Add Gallery to the sub-navigation found in certain pages like shops
          */
         function galleryOldSubNav() {
-            let subNavClosetLink = document.querySelector('td.content > div.medText > br:nth-of-type(2)');
-            subNavClosetLink.insertAdjacentHTML('beforebegin', ' | <a href=\'/gallery/index.phtml\'>Gallery</a>');
+            let subNavEndOfMid = document.querySelector('td.content div.medText > br:nth-of-type(2)');
+            subNavEndOfMid.insertAdjacentHTML('beforebegin', ' | <a href=\'/gallery/index.phtml\'>Gallery</a>');
         }
 
         function appendToExploreOldNav(name, urlPath) {
