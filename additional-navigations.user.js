@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Additional Navigations
-// @version      1.0.2
+// @version      1.0.3
 // @author       zevanty
 // @description  Add additional navigations (links) to pages except to shops for performance purposes.
 // @include      /^https:\/\/(www|ncmall)\.neopets\.com\//
@@ -39,8 +39,9 @@
         else if (oldUI) {
             questlogOldNav();
             currentPlotOldNav();
-            quickStockOldSubNav()
-            galleryOldSubNav()
+            quickStockOldSubNav();
+            galleryOldSubNav();
+            stampOldNav();
         }
 
         /**
@@ -145,7 +146,9 @@
          */
         function quickStockOldSubNav() {
             let subNavClosetLink = document.querySelector('td.content div.medText > a:nth-of-type(9)');
-            subNavClosetLink.insertAdjacentHTML('beforebegin', '<a href=\'/quickstock.phtml\'>Quick Stock</a> | ');
+            if (subNavClosetLink) {
+                subNavClosetLink.insertAdjacentHTML('beforebegin', '<a href=\'/quickstock.phtml\'>Quick Stock</a> | ');
+            }
         }
 
         /**
@@ -153,7 +156,73 @@
          */
         function galleryOldSubNav() {
             let subNavEndOfMid = document.querySelector('td.content div.medText > br:nth-of-type(2)');
-            subNavEndOfMid.insertAdjacentHTML('beforebegin', ' | <a href=\'/gallery/index.phtml\'>Gallery</a>');
+            if (subNavEndOfMid) {
+                subNavEndOfMid.insertAdjacentHTML('beforebegin', ' | <a href=\'/gallery/index.phtml\'>Gallery</a>');
+            }
+        }
+
+        /**
+         * Old UI: Add Prev and Next buttons to the Stamp Album
+         */
+        function stampOldNav() {
+            let currUrl = location.toString();
+            if (/stamps\.phtml\?/.test(currUrl)) {
+                let currPageNum = 0;
+
+                // Get the current page number
+                if (/type=album/.test(currUrl) && /page_id=\d+/.test(currUrl)) {
+                    currPageNum = Number(currUrl.match(/page_id=(\d+)/)[1]);
+                }
+                // When accessed from user lookup or the new UI navigation, the URL to album cover is different
+                else if (/stamps\.phtml\?(owner=|type=album)/.test(currUrl)) {
+                    currPageNum = 0;
+                }
+                // Do nothing as it is not a valid album page.
+                else {
+                    return;
+                }
+
+                let stampPages = document.querySelectorAll('td.content > div > p:nth-of-type(3) > a');
+                if (stampPages.length == 0) {
+                    alert('Something is wrong. No stamp pages were found.');
+                    return;
+                }
+
+                let prevPageNum = (currPageNum == 0 ? stampPages.length-1 : currPageNum-1);
+                let prevPageUrl = stampPages[prevPageNum].getAttribute('href');
+                let prevPageImg = 'https://images.neopets.com/images/pics_back.gif';
+                let prevButton = document.createElement('td');
+                prevButton.setAttribute('align','center');
+                prevButton.innerHTML='<a href='+prevPageUrl+'><img src="'+prevPageImg+'" width="60" height="60" border="0"></a><br><b>Prev</b>';
+
+                let nextPageNum = (currPageNum == stampPages.length-1 ? 0 : currPageNum+1);
+                let nextPageUrl = stampPages[nextPageNum].getAttribute('href');
+                let nextPageImg = 'https://images.neopets.com/images/pics_next.gif';
+                let nextButton = document.createElement('td');
+                nextButton.setAttribute('align','center');
+                nextButton.innerHTML='<a href='+nextPageUrl+'><img src="'+nextPageImg+'" width="60" height="60" border="0"></a><br><b>Next</b>';
+
+                if (currPageNum == 0) {
+                    let albumCover = document.querySelector('div#content td.content > div > center:nth-of-type(2)');
+                    let navRow = document.createElement('table');
+                    navRow.setAttribute('width','450'); // The album cover is manually set to 450px, so doing the same here.
+                    navRow.innerHTML='<tbody><tr>' +
+                        '<td align="center" width="90"><a href="'+prevPageUrl+'"><img src="'+prevPageImg+'" width="60" height="60" border="0"></a><br><b>Prev</b></td>' +
+                        '<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+                        '<td align="center" width="90"><a href="'+nextPageUrl+'"><img src="'+nextPageImg+'" width="60" height="60" border="0"></a><br><b>Next</b></td>' +
+                        '</tr></tbody>';
+
+                    albumCover.insertBefore(navRow, albumCover.firstChild);
+                }
+                else {
+                    let currPageName = document.querySelector('div#content td.content > div > table td[colspan="5"]');
+                    currPageName.setAttribute('colspan','3');
+
+                    let currPageNameRow = currPageName.parentNode;
+                    currPageNameRow.insertBefore(prevButton, currPageName);
+                    currPageNameRow.insertBefore(nextButton, currPageName.nextSibling);
+                }
+            }
         }
 
         function appendToExploreOldNav(name, urlPath) {

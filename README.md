@@ -23,6 +23,7 @@ This adds additional navigation links to different pages **except** shop pages a
 **Old UI**
 * Quest Log and the current plot under main navigation's _Explore_ option
 * Quick Stock and Gallery to the sub-navigation
+* Previous and Next buttons for Stamp Album
 
 ## Wishing Well - Auto-fill Wish
 [userscript](wishing-well-autofill.user.js)
