@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.8
+// @version      1.0.9
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
 // @include      /^https?:\/\/www.neopets.com\/?(index\.phtml)?$/
-// @include      /^https?:\/\/www\.neopets\.com\/(nf|market_plaza|market_bazaar)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/nf\.phtml\/?/
+// @include      /^https?:\/\/www\.neopets\.com\/(market_plaza|market_bazaar)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/(explore|generalstore)\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/altador\/(index)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/desert\/(index|qasala|sakhmet|shrine)\.phtml$/
@@ -70,6 +71,20 @@
                 item.setAttribute('onclick', 'window.location=\'/generalstore.phtml/\';');
             }
         }
+    }
+
+    // Fix older news page on Classic UI
+    else if (currUrl.includes('/nf.phtml/')) {
+
+        let items = document.querySelectorAll('a[href*="/nf.phtml?"]');
+        items.forEach(item => {
+            let url = item.getAttribute('href');
+
+            // In theory, the index of '?' should be the same for all URLs. Computing dynamically just in case.
+            let index = url.indexOf('?');
+
+            item.setAttribute('href', url.substring(0,index) + '/' + url.substring(index));
+        });
     }
 
     // Make sure Jellyneo's Dailies link to Rich Slorg page is to Classic
