@@ -35,6 +35,11 @@ This will automatically fill in the form for the Wishing Well. Technically not c
 
 This will highlight the correct answer in Lunar Temple. Technically not cheating since you still need to manually submit the answer.
 
+## Display SDB Item Names in a Textarea
+[userscript](sdb-item-names-textarea.user.js)
+
+This will put the SDB item names in a textarea at the top of the page (with a switch to toggle the display). Useful for if you just want to copy a list of item names from the current page.
+
 ## Neocola Machine - Generate More NP
 [userscript](neocola-machine-more-np.user.js)
 
