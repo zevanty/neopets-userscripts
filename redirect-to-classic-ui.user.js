@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.9
+// @version      1.0.10
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
 // @include      /^https?:\/\/www.neopets.com\/?(index\.phtml)?$/
@@ -10,7 +10,8 @@
 // @include      /^https?:\/\/www\.neopets\.com\/altador\/(index)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/desert\/(index|qasala|sakhmet|shrine)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/halloween\/(index|index_fair|neovia)\.phtml$/
-// @include      /^https?:\/\/www\.neopets\.com\/faerieland\/(caverns\/)?(index|faeriecity|springs|tdmbgpop)\.phtml(\/springs.phtml)?$/
+// @include      /^https?:\/\/www\.neopets\.com\/faerieland\/(caverns\/)?(index|faeriecity|tdmbgpop)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/faerieland\/springs\.phtml(\/|\/springs.phtml)?$/
 // @include      /^https?:\/\/www\.neopets\.com\/island\/(haiku\/)?(index|haiku|mystichut)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/jelly\/(index|jelly)\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/magma\/(index|caves)\.phtml$/
@@ -45,13 +46,17 @@
     }
 
     // Fix Healing Spring purchase page on Classic UI
-    else if (currUrl.endsWith('/springs.phtml/springs.phtml')) {
+    else if (currUrl.match(/\/springs\.phtml\/(springs\.phtml)?$/)) {
         let headerUrl = 'https://www.neopets.com/faerieland/';
         let items = document.querySelectorAll('a[href*="process_springs.phtml"]');
         items.forEach(item => {
             let itemUrl = item.getAttribute('href');
             item.setAttribute('href', headerUrl + itemUrl);
         });
+        let returnBtn = document.querySelector('form[action="index.phtml"]');
+        if (returnBtn) {
+            returnBtn.setAttribute('action', headerUrl+'index.phtml/');
+        }
     }
 
     // Fix General Store purchase page on Classic UI
