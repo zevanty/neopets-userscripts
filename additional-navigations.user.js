@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Additional Navigations
-// @version      1.0.3
+// @version      1.0.4
 // @author       zevanty
 // @description  Add additional navigations (links) to pages except to shops for performance purposes.
 // @include      /^https:\/\/(www|ncmall)\.neopets\.com\//
@@ -51,7 +51,7 @@
             // For simplicity, use the same CSS classes as the NP navigation link.
 
             let navInventoryTop = document.createElement('a');
-            navInventoryTop.setAttribute('href', '/inventory.phtml');
+            navInventoryTop.setAttribute('href', 'https://www.neopets.com/inventory.phtml');
 
             let navInventoryBlock = document.createElement('div');
             navInventoryBlock.classList.add('navsub-np-meter__2020');
