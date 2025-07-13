@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Additional Navigations
-// @version      1.0.4
+// @version      1.0.5
 // @author       zevanty
 // @description  Add additional navigations (links) to pages except to shops for performance purposes.
 // @include      /^https:\/\/(www|ncmall)\.neopets\.com\//
@@ -184,8 +184,11 @@
 
                 let stampPages = document.querySelectorAll('td.content > div > p:nth-of-type(3) > a');
                 if (stampPages.length == 0) {
-                    alert('Something is wrong. No stamp pages were found.');
-                    return;
+                    stampPages = document.querySelectorAll('td.content > p:nth-of-type(3) > a');
+                    if (stampPages.length == 0) {
+                        alert('Something is wrong. No stamp pages were found.');
+                        return;
+                    }
                 }
 
                 let prevPageNum = (currPageNum == 0 ? stampPages.length-1 : currPageNum-1);
@@ -204,6 +207,13 @@
 
                 if (currPageNum == 0) {
                     let albumCover = document.querySelector('div#content td.content > div > center:nth-of-type(2)');
+                    if (albumCover == null) {
+                        albumCover = document.querySelector('div#content td.content > center:nth-of-type(2)');
+                        if (albumCover == null) {
+                            alert('Something is wrong. Cannot find the stamp album cover.');
+                            return;
+                        }
+                    }
                     let navRow = document.createElement('table');
                     navRow.setAttribute('width','450'); // The album cover is manually set to 450px, so doing the same here.
                     navRow.innerHTML='<tbody><tr>' +
@@ -216,6 +226,13 @@
                 }
                 else {
                     let currPageName = document.querySelector('div#content td.content > div > table td[colspan="5"]');
+                    if (currPageName == null) {
+                        currPageName = document.querySelector('div#content td.content > p > table td[colspan="5"]');
+                        if (currPageName == null) {
+                            alert('Something is wrong. Cannot find the current album name.');
+                            return;
+                        }
+                    }
                     currPageName.setAttribute('colspan','3');
 
                     let currPageNameRow = currPageName.parentNode;
