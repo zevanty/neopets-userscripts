@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.10
+// @version      1.0.11
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
 // @include      /^https?:\/\/www.neopets.com\/?(index\.phtml)?$/
@@ -90,6 +90,12 @@
 
             item.setAttribute('href', url.substring(0,index) + '/' + url.substring(index));
         });
+    }
+
+    // Faerie Caverns: don't redirect to Classic UI for premium users because
+    // there is a bug that allows unlimited attempts.
+    else if (currUrl.endsWith('faerieland/caverns/index.phtml') && document.querySelector('div.navsub-ssw-icon__2020')) {
+        // Do nothing
     }
 
     // Make sure Jellyneo's Dailies link to Rich Slorg page is to Classic
