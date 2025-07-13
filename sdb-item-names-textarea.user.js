@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Display SDB Item Names in a Textarea
-// @version      1.1.0
+// @version      1.1.1
 // @author       zevanty
 // @description  Display SDB item names in a textarea. Makes it easy for copy/paste names for whatever you need to do with it.
 // @include      /^https:\/\/www\.neopets\.com\/safetydeposit\.phtml/
@@ -18,6 +18,7 @@
     const HIDE_RETIRED = false;
     const HIDE_ARTIFACT = false;
     const HIDE_NEOCASH = false;
+    const SHOW_TEXTAREA_BY_DEFAULT = false;
 
     let head = document.getElementsByTagName('head')[0];
     if (head) {
@@ -132,10 +133,17 @@ function toggleListDisplay() {
             ignoreCategoriesMsg = '<strong>Ignoring: </strong>' + ignoreCategoriesMsg;
 }
 
+        let switchAttr = '';
+        let textareaDisplayStyle = 'none';
+        if (SHOW_TEXTAREA_BY_DEFAULT) {
+            switchAttr = 'checked';
+            textareaDisplayStyle = 'block';
+        }
+
         let sdbEndDesc = document.querySelector('td.content > hr');
         sdbEndDesc.insertAdjacentHTML('afterend',
-                                      '<label><span><strong>Show SDB List?</strong></span><input id="CustomSwitch" type="checkbox" role="switch" onclick="toggleListDisplay()" /></label><br />' +
-                                      '<div id="SDBList">' +
+                                      '<label><span><strong>Show SDB List?</strong></span><input id="CustomSwitch" type="checkbox" role="switch" onclick="toggleListDisplay()" '+switchAttr+' /></label><br />' +
+                                      '<div id="SDBList" style="display:'+textareaDisplayStyle+'">' +
                                       ignoreCategoriesMsg +
                                       '<textarea rows="10" style="width:100%;display:block">'+itemsList+'</textarea><hr noshade="" size="1" color="#E4E4E4">' +
                                       '</div>'
