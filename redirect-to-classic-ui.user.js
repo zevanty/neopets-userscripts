@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Redirect to Classic UI
-// @version      1.0.11
+// @version      1.0.12
 // @author       zevanty
 // @description  Redirect the page to use classic UI. Note that some pages require Flash for it to work.
 // @include      /^https?:\/\/www.neopets.com\/?(index\.phtml)?$/
 // @include      /^https?:\/\/www\.neopets\.com\/nf\.phtml\/?/
-// @include      /^https?:\/\/www\.neopets\.com\/(market_plaza|market_bazaar)\.phtml$/
+// @include      /^https?:\/\/www\.neopets\.com\/(market_plaza|market_bazaar|market_map)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/(explore|generalstore)\.phtml\/?$/
 // @include      /^https?:\/\/www\.neopets\.com\/altador\/(index)\.phtml$/
 // @include      /^https?:\/\/www\.neopets\.com\/desert\/(index|qasala|sakhmet|shrine)\.phtml$/
