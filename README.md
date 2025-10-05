@@ -35,6 +35,21 @@ This will automatically fill in the form for the Wishing Well. Technically not c
 
 This will highlight the correct answer in Lunar Temple. Technically not cheating since you still need to manually submit the answer.
 
+## Grumpy Old King - Auto-select Options
+[userscript](grumpy-old-king-autofill.user.js)
+
+This will create two buttons in Grumpy Old King. One will generate a random selection. Another will select values for the avatar. Technically not cheating since you still need to manually submit your selection.
+
+## Wise Old King - Auto-select Options
+[userscript](wise-old-king-autofill.user.js)
+
+This will create a button in Wise Old King that will generate a random selection. Technically not cheating since you still need to manually submit your selection.
+
+## Guess the Weight of the Marrow - Auto-fill Weight
+[userscript](guess-marrow-weight-autofill.user.js)
+
+This will automatically fill in the form for Guess the Weight of the Marrow with either a random number or a number of your choice. Technically not cheating since you still need to manually submit the guess.
+
 ## Display SDB Item Names in a Textarea
 [userscript](sdb-item-names-textarea.user.js)
 
