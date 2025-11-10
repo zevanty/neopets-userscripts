@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Grumpy Old King Auto-fill
-// @version      1.0.0
+// @version      1.0.1
 // @author       zevanty
 // @description  Add buttons to auto-fill Grumpy Old King with the avatar solution or with random values.
 // @include      /^https:\/\/www\.neopets\.com\/medieval\/grumpyking\.phtml/
@@ -55,6 +55,44 @@ function avatarOptions() {
         }
     });
 };
+
+// Temporary fix for broken submission.
+// Basically copied/pasted the original code with some slight modifications.
+function handleSubmitFix() {
+    var kingForm = document.getElementById('process_grumpyking');
+    var kingData = new URLSearchParams(new FormData(kingForm));
+
+    const grumpyTools = document.getElementById('grumpy_tools');
+    if (grumpyTools != null && grumpyTools.length != null && grumpyTools.length > 0) {
+        var grumpy_devtools = new URLSearchParams(new FormData(grumpyTools));
+        grumpy_devtools.forEach(function(value, key) {
+            kingData.append(key, value);
+        })
+    }
+
+    fetch('/np-templates/ajax/grumpyking.php', {
+        method: 'POST',
+        body: kingData,
+    })
+    .then(
+        function (response) {
+            if (response.status !== 200) {
+                console.log('There was an error fetching grumpy king data!');
+                return;
+            }
+
+            response.json().then(function (data) {
+                var grumpyContainer = document.getElementById("grumpyking_container");
+                grumpyContainer.innerHTML = data.message;
+                grumpyContainer.style.display = "block";
+            });
+        }
+    )
+    .catch(function (err) {
+        console.log('Fetch Error :-S', err);
+    });
+
+}
         `;
         head.appendChild(script);
 
@@ -62,6 +100,10 @@ function avatarOptions() {
         showHideButton.insertAdjacentHTML('afterend',
                                           '<button type="button" class="button-default__2020 button-yellow__2020" onclick="randomOptions();">Random</button>' +
                                           '<button type="button" class="button-default__2020 button-yellow__2020" onclick="avatarOptions();">Avatar</button>');
+
+        // Redirect the submit button to point to the fixed method.
+        let submitButton = document.getElementById('process_grumpyking');
+        submitButton.setAttribute('onsubmit', 'handleSubmitFix(this); return false;');
     }
 
 })();
