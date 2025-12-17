@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Additional Navigations
-// @version      1.0.5
+// @version      1.0.6
 // @author       zevanty
 // @description  Add additional navigations (links) to pages except to shops for performance purposes.
 // @include      /^https:\/\/(www|ncmall)\.neopets\.com\//
@@ -76,7 +76,7 @@
          */
         function quickrefNewProfileNav() {
             let profilePetAnchor = document.querySelector('div#navprofiledropdown__2020 > ul > li > a');
-            profilePetAnchor.setAttribute('href', '/quickref.phtml');
+            profilePetAnchor.setAttribute('href', 'https://www.neopets.com/quickref.phtml');
         }
 
         /**
@@ -86,7 +86,7 @@
             let profileInventoryBlock = document.querySelector('div#profileInventorySection');
 
             let navClosetTop = document.createElement('a');
-            navClosetTop.setAttribute('href', '/closet.phtml');
+            navClosetTop.setAttribute('href', 'https://www.neopets.com/closet.phtml');
 
             let navClosetBlock = document.createElement('li');
             navClosetBlock.classList.add('profile-dropdown-subsection');
@@ -110,7 +110,7 @@
             let profileAlbumBlock = document.querySelector('div#profileAlbumSection');
 
             let navNeodeckTop = document.createElement('a');
-            navNeodeckTop.setAttribute('href', '/games/neodeck/index.phtml');
+            navNeodeckTop.setAttribute('href', 'https://www.neopets.com/games/neodeck/index.phtml');
 
             let navNeodeckBlock = document.createElement('li');
             navNeodeckBlock.classList.add('profile-dropdown-subsection');
