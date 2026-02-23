@@ -50,6 +50,11 @@ This will create a button in Wise Old King that will generate a random selection
 
 This will automatically fill in the form for Guess the Weight of the Marrow with either a random number or a number of your choice. Technically not cheating since you still need to manually submit the guess.
 
+## Dice-A-Roo - Hide "Stop Playing" Button
+[userscript](dice-a-roo-hide-stop-button.user.js)
+
+This will hide the "Stop Playing" button in Dice-A-Roo. It is helpful if you just want to mindlessly click the Roll button until you get the avatar.
+
 ## Display SDB Item Names in a Textarea
 [userscript](sdb-item-names-textarea.user.js)
 
